@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet" href="style.css" />
+  <head>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init("OSiiqp6r6ii0Hlgwn");
+  })();
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Psicología | Sandra Quiles Sánchez </title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Hola, soy Sandra</h1>
+    <h2>Psicóloga General Sanitaria en Oviedo | Terapia Online</h2>
+
+    <p>
+      Acompaño procesos de cambio, bienestar emocional y crecimiento personal.
+      Si estás buscando un espacio seguro y profesional, estás en el lugar adecuado.
+    </p>
+
+    <h3>Servicios</h3>
+    <ul>
+      <li>Terapia individual para adultos</li>
+      <li>Terapia online</li>
+      <li>Depresión</li>
+      <li>Ansiedad</li>
+      <li>Regulación emocional</li>
+      <li>Relaciones interpersonales</li>
+      <li>Autoestima</li>
+      <li>Estrés</li>
+      <li>Crisis vital</li>
+      <li>Duelo</li>
+    </ul>
+
+    <h3>Contacto</h3>
+    <form id="contact-form">
+    <label for="nombre">Tu nombre:</label><br />
+    <input type="text" id="nombre" name="nombre" /><br /><br />
+
+    <label for="correo">Tu correo:</label><br />
+    <input type="email" id="correo" name="correo" /><br /><br />
+
+    <label for="mensaje">Tu mensaje:</label><br />
+    <textarea id="mensaje" name="mensaje"></textarea><br /><br />
+
+    <button type="submit">Enviar</button>
+    </form>
+
+<script type="text/javascript">
+document.getElementById('contact-form')
+  .addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_web', 'template_bb3lvdu', this)
+      .then(function() {
+        window.location.href = "https://sandraqpsicologia.netlify.app/gracias.html";
+      }, function(error) {
+        alert('¡Hubo un problema! Por favor intenta más tarde.', error);
+      });
+  });
+</script>
+<footer>
+  <p>© 2025 Sandra Quiles | Psicóloga | Todos los derechos reservados</p>
+</footer>
+  </body>
+</html>
