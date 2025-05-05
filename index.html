@@ -1,41 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
-<link rel="stylesheet" href="style.css" />
   <head>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script type="text/javascript">
-  (function(){
-    emailjs.init("OSiiqp6r6ii0Hlgwn");
-  })();
-
-document.getElementById("reserva-form").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const datos = {
-    fecha: document.getElementById("fecha").value,
-    hora: document.getElementById("hora").value,
-    nombre: document.getElementById("nombre").value,
-    email: document.getElementById("email").value
-  };
-
-  fetch("/.netlify/functions/reservar", {
-    method: "POST",
-    body: JSON.stringify(datos)
-  })
-  .then(res => res.json())
-  .then(data => {
-    alert(data.mensaje);
-    document.getElementById("reserva-form").reset();
-  })
-  .catch(err => {
-    console.error("Error al reservar:", err);
-  });
-});
-</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Psicología | Sandra Quiles Sánchez </title>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Psicología | Sandra Quiles Sánchez</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("OSiiqp6r6ii0Hlgwn");
+      })();
+    </script>
   </head>
   <body>
     <h1>Hola, soy Sandra</h1>
@@ -60,66 +42,104 @@ document.getElementById("reserva-form").addEventListener("submit", function(e) {
       <li>Duelo</li>
     </ul>
 
-<section id="reserva">
-  <h3>Reserva tu cita</h3>
-  <form id="reserva-form">
-    <label for="fecha">Fecha:</label>
-    <input type="date" id="fecha" name="fecha" required>
+    <section id="reserva">
+      <h3>Reserva tu cita</h3>
+      <form id="reserva-form">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required />
 
-    <label for="hora">Hora:</label>
-    <select id="hora" name="hora" required>
-      <option value="">--Selecciona una hora--</option>
-      <option value="10:00">10:00</option>
-      <option value="11:00">11:00</option>
-      <option value="12:00">12:00</option>
-      <option value="13:00">13:00</option>
-      <option value="16:00">16:00</option>
-      <option value="17:00">17:00</option>
-      <option value="18:00">18:00</option>
-      <option value="19:00">19:00</option>
-      <option value="20:00">20:00</option>
-    </select>
+        <label for="hora">Hora:</label>
+        <select id="hora" name="hora" required>
+          <option value="">--Selecciona una hora--</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="12:00">12:00</option>
+          <option value="13:00">13:00</option>
+          <option value="16:00">16:00</option>
+          <option value="17:00">17:00</option>
+          <option value="18:00">18:00</option>
+          <option value="19:00">19:00</option>
+          <option value="20:00">20:00</option>
+        </select>
 
-    <label for="nombre">Tu nombre:</label>
-    <input type="text" id="nombre" name="nombre" required>
+        <label for="nombre">Tu nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
 
-    <label for="email">Tu email:</label>
-    <input type="email" id="email" name="email" required>
+        <label for="email">Tu email:</label>
+        <input type="email" id="email" name="email" required />
 
-    <button type="submit">Reservar</button>
-    <p id="mensaje-confirmacion" style="display: none;">¡Reserva enviada!</p>
-  </form>
-</section>
+        <button type="submit">Reservar</button>
+        <p id="mensaje-confirmacion" style="display: none;">¡Reserva enviada!</p>
+      </form>
+    </section>
 
     <h3>Contacto</h3>
     <form id="contact-form">
-    <label for="nombre">Tu nombre:</label><br />
-    <input type="text" id="nombre" name="nombre" /><br /><br />
+      <label for="nombre">Tu nombre:</label><br />
+      <input type="text" id="nombre" name="nombre" /><br /><br />
 
-    <label for="correo">Tu correo:</label><br />
-    <input type="email" id="correo" name="correo" /><br /><br />
+      <label for="correo">Tu correo:</label><br />
+      <input type="email" id="correo" name="correo" /><br /><br />
 
-    <label for="mensaje">Tu mensaje:</label><br />
-    <textarea id="mensaje" name="mensaje"></textarea><br /><br />
+      <label for="mensaje">Tu mensaje:</label><br />
+      <textarea id="mensaje" name="mensaje"></textarea><br /><br />
 
-    <button type="submit">Enviar</button>
+      <button type="submit">Enviar</button>
     </form>
 
-<script type="text/javascript">
-document.getElementById('contact-form')
-  .addEventListener('submit', function(event) {
-    event.preventDefault();
+    <footer>
+      <p>© 2025 Sandra Quiles | Psicóloga | Todos los derechos reservados</p>
+    </footer>
 
-    emailjs.sendForm('service_web', 'template_bb3lvdu', this)
-      .then(function() {
-        window.location.href = "https://sandraqpsicologia.netlify.app/gracias.html";
-      }, function(error) {
-        alert('¡Hubo un problema! Por favor intenta más tarde.', error);
-      });
-  });
-</script>
-<footer>
-  <p>© 2025 Sandra Quiles | Psicóloga | Todos los derechos reservados</p>
-</footer>
+    <!-- Scripts al final para que cargue el DOM antes -->
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          emailjs.sendForm("service_web", "template_bb3lvdu", this).then(
+            function () {
+              window.location.href =
+                "https://sandraqpsicologia.netlify.app/gracias.html";
+            },
+            function (error) {
+              alert(
+                "¡Hubo un problema! Por favor intenta más tarde.",
+                error
+              );
+            }
+          );
+        });
+
+      document
+        .getElementById("reserva-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const datos = {
+            fecha: document.getElementById("fecha").value,
+            hora: document.getElementById("hora").value,
+            nombre: document.getElementById("nombre").value,
+            email: document.getElementById("email").value,
+          };
+
+          fetch("/.netlify/functions/reservar", {
+            method: "POST",
+            body: JSON.stringify(datos),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              alert(data.mensaje);
+              document
+                .getElementById("mensaje-confirmacion")
+                .style.display = "block";
+              document.getElementById("reserva-form").reset();
+            })
+            .catch((err) => {
+              console.error("Error al reservar:", err);
+            });
+        });
+    </script>
   </body>
 </html>
