@@ -1,6 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #add0b3;
+  background-color: #f0f4f8;
   color: #333;
   margin: 40px;
   line-height: 1.6;
@@ -8,7 +8,7 @@ body {
 
 /* Títulos */
 h1 {
-  color: #f8b195;
+  color: #375a7f;
   font-size: 36px;
 }
 
@@ -26,7 +26,7 @@ form {
 }
 
 input, textarea {
-  width: 90%;
+  width: 95%;
   padding: 10px;
   margin: 8px 0 16px 0;
   border: 1px solid #ccc;
@@ -67,7 +67,7 @@ button:hover {
 footer {
   margin-top: 60px;
   padding: 20px;
-  background-color: #f8b195;
+  background-color: #375a7f;
   color: white;
   text-align: center;
   font-size: 14px;
@@ -105,7 +105,7 @@ footer {
 body.gracias {
   margin: 0;
   padding: 0;
-  background-color: #add0b3;
+  background-color: #f0f4f8;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,7 +137,7 @@ body.gracias {
 }
 
 .gracias-texto h1 {
-  color: #f8b195;
+  color: #375a7f;
   font-size: 30px;
   margin: 5px 0;
 }
