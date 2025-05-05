@@ -118,7 +118,7 @@ body.gracias {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  max-width: 800px;
+  max-width: 1000px;
   padding: 40px;
   gap: 40px;
   text-align: left;
@@ -126,7 +126,7 @@ body.gracias {
 }
 
 .gracias-texto {
-  max-width: 400px;
+  max-width: 500px;
   flex: 1;
 }
 
@@ -166,13 +166,13 @@ body.gracias {
 
 .gracias-gif-wrapper {
   flex: 1;
-  max-width: 200px;
+  max-width: 300px;
   text-align: right;
 }
 
 .gif-gracias {
   width: 100%;
-  max-height: 200px;
+  max-height: 300px;
   object-fit: contain;
   animation: zoomIn 1.5s ease-out;
 }
