@@ -166,13 +166,13 @@ body.gracias {
 
 .gracias-gif-wrapper {
   flex: 1;
-  max-width: 300px;
+  max-width: 250px;
   text-align: right;
 }
 
 .gif-gracias {
   width: 100%;
-  max-height: 300px;
+  max-height: 250px;
   object-fit: contain;
   animation: zoomIn 1.5s ease-out;
 }
