@@ -131,20 +131,20 @@ body.gracias {
 }
 
 .gracias-texto .icono {
-  font-size: 40px;
+  font-size: 60px;
   margin-bottom: 5px;
   animation: aparecer 0.8s ease-out;
 }
 
 .gracias-texto h1 {
   color: #375a7f;
-  font-size: 28px;
+  font-size: 30px;
   margin: 5px 0;
 }
 
 .gracias-texto p {
   color: #5c6b7c;
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
