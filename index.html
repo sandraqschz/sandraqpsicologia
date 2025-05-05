@@ -7,6 +7,30 @@
   (function(){
     emailjs.init("OSiiqp6r6ii0Hlgwn");
   })();
+
+document.getElementById("reserva-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const datos = {
+    fecha: document.getElementById("fecha").value,
+    hora: document.getElementById("hora").value,
+    nombre: document.getElementById("nombre").value,
+    email: document.getElementById("email").value
+  };
+
+  fetch("/.netlify/functions/reservar", {
+    method: "POST",
+    body: JSON.stringify(datos)
+  })
+  .then(res => res.json())
+  .then(data => {
+    alert(data.mensaje);
+    document.getElementById("reserva-form").reset();
+  })
+  .catch(err => {
+    console.error("Error al reservar:", err);
+  });
+});
 </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
