@@ -3,64 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Psicología | Sandra Quiles Sánchez</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("OSiiqp6r6ii0Hlgwn");
-      })();
-    </script>
-  </head>
+    <title>Sandra Quiles | Psicología </title>
+    <style>
+    body { margin: 0; font-family: Arial, sans-serif; color: #333; }
+    header { background: #f0f0f0; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    nav a { margin-left: 1rem; text-decoration: none; color: #333; font-weight: bold; }
+    .hero { padding: 4rem 2rem; background: #e7f1f1; text-align: center; }
+    .section { padding: 3rem 2rem; max-width: 1000px; margin: auto; }
+    .services, .team, .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+    .card { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    footer { background: #333; color: #fff; padding: 2rem; text-align: center; }
+    footer a { color: #fff; margin: 0 0.5rem; text-decoration: none; }
+  </style>
+</head>
   <body>
-    <h1>Hola, soy Sandra</h1>
-    <h2>Psicóloga General Sanitaria en Oviedo | Terapia Online</h2>
-
-    <p>
-      Acompaño procesos de cambio, bienestar emocional y crecimiento personal.
-      Si estás buscando un espacio seguro y profesional, estás en el lugar adecuado.
-    </p>
-
-    <h3>Servicios</h3>
-    <ul>
-      <li>Terapia individual para adultos</li>
-      <li>Terapia online</li>
-      <li>Depresión</li>
-      <li>Ansiedad</li>
-      <li>Regulación emocional</li>
-      <li>Relaciones interpersonales</li>
-      <li>Autoestima</li>
-      <li>Estrés</li>
-      <li>Crisis vital</li>
-      <li>Duelo</li>
-    </ul>
-
-    <!-- Principio del widget integrado de Calendly -->
+ <header>
+    <div><strong>Tu Logo</strong></div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+ <section class="hero" id="inicio">
+    <h1>Bienvenido a mi rinconcito de psicología.</h1>
+    <p>Acompaño procesos de cambio, bienestar emocional y crecimiento personal.
+Si buscas un espacio seguro y profesional desde el que trabajar para construir la vida que quieres, estás en el lugar adecuado.</p>
+  </section>
+    
+<section class="section" id="servicios">
+    <h2>Servicios</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Psicoterapia Individual</h3>
+        <p>Sesiones personalizadas en formato presencial u online para acompañarte en tu proceso emocional.</p>
+      </div>
+      <div class="card">
+        <h3>Nutrición Consciente</h3>
+        <p>Planificación nutricional adaptada a tus necesidades.</p>
+      </div>
+      <div class="card">
+        <h3>Terapia de pareja o familiar</h3>
+        <p>Mejora la comunicación y los vínculos en tus relaciones interpersonales.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="reserva">
+    <h2>Reserva tu cita</h2>
+    <div class="reserva">
+      <!-- Principio del widget integrado de Calendly -->
 <div class="calendly-inline-widget" data-url="https://calendly.com/sandra-q-psicologa" style="min-width:320px;height:700px;"></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <!-- Final del widget integrado de Calendly -->
-
-    <h3>Contacto</h3>
-    <form id="contact-form">
-      <label for="nombre">Tu nombre:</label><br />
-      <input type="text" id="nombre" name="nombre" /><br /><br />
-
-      <label for="correo">Tu correo:</label><br />
-      <input type="email" id="correo" name="correo" /><br /><br />
-
-      <label for="mensaje">Tu mensaje:</label><br />
-      <textarea id="mensaje" name="mensaje"></textarea><br /><br />
-
-      <button type="submit">Enviar</button>
-    </form>
-
+      </div>
+    </div>
+  </section>
+   
+<footer id="contacto">
+    <p>Contacto: tunombre@email.com | Tel: +34 600 000 000</p>
+    <div>
+      <a href="#">Instagram</a> | 
+      <a href="#">Facebook</a> | 
+      <a href="#">Política de privacidad</a>
+    </div>
+  </footer>
     <footer>
       <p>© 2025 Sandra Quiles | Psicóloga | Todos los derechos reservados</p>
     </footer>
