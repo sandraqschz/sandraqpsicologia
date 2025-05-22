@@ -51,18 +51,8 @@ button:hover {
     margin: 20px;
   }
 
-  form {
-    padding: 15px;
-    max-width: 100%;
-  }
-
   h1 {
     font-size: 28px;
-  }
-
-  h2, h3 {
-    font-size: 20px;
-  }
 }
 footer {
   margin-top: 60px;
@@ -72,16 +62,7 @@ footer {
   text-align: center;
   font-size: 14px;
   border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-@media (max-width: 600px) {
-  body {
-    margin: 20px;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
+  border-top-right-radius: 20px;  }
 
   h2, h3 {
     font-size: 22px;
@@ -94,12 +75,21 @@ footer {
   form {
     padding: 15px;
     max-width: 100%;
+
+ .hero {
+    padding: 4rem 1rem;
+    min-height: 350px;
   }
 
-  footer {
-    font-size: 12px;
-    padding: 15px;
+  .hero h1 {
+    font-size: 1.6rem;
   }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+ 
 }
 /* === Estilos para la página de gracias en dos columnas === */
 body.gracias {

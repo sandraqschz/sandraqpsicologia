@@ -11,13 +11,15 @@
     nav a:hover { color: #f3a448; text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
   cursor: pointer; transform: scale(1.1); }
 
-    .hero { position: relative; padding: 6rem 2rem; background: url('hero.jpg') no-repeat center center; background-size: cover; color: #ffffff; text-align: center; min-height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden; }
+    .hero { position: relative; padding: 7rem 2rem; background: url('hero.jpg') no-repeat center center; background-size: cover; color: #ffffff; text-align: center; height: 500px; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden; }
 
 .hero::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.3); z-index: 0; }
 
 .hero > * { position: relative; z-index: 1; }
 
-.photo-credit { position: absolute; bottom: 10px; left: 10px; font-size: 0.75rem; color: rgba(255, 255, 255, 0.7); z-index: 2; font-family: Arial, sans-serif; user-select: none; }
+.photo-credit { position: absolute; bottom: 10px; left: 10px; font-size: 0.75rem; color: rgba(255, 255, 255, 0.8); z-index: 2; font-family: Arial, sans-serif; user-select: none; text-decoration: none; }
+
+.photo-credit a:hover { text-decoration: underline; color: #fff; }
 
     .section { padding: 3rem 2rem; max-width: 1000px; margin: auto; }
     .services, .team, .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
@@ -26,7 +28,7 @@
     input, textarea { width: 100%; padding: 0.75rem; border-radius: 4px; border: 1px solid #ccc; }
     button { padding: 0.75rem; background: #53824c; color: white; border: none; border-radius: 4px; cursor: pointer; }
     button:hover { background: #436d3d; }
-    footer { background: #7cbf53; color: #53824c; padding: 2rem; text-align: center; }
+    footer { background: #dfece1; color: #53824c; padding: 2rem; text-align: center; }
     footer a { color: #53824c; margin: 0 0.5rem; text-decoration: none; }
  footer a:hover { text-decoration: underline; }
   </style>
